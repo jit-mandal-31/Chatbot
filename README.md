@@ -1,1 +1,67 @@
-# Chatbot
+# Chatbot using Flan-T5 
+
+This project is a **command-line chatbot** built as part of the ATG Technical Assignment.  
+It uses **Hugging Face’s Flan-T5 model** for text generation, with a **sliding window memory** and a **fallback mechanism** to ensure more accurate answers for common factual questions.  
+
+---
+
+## 📌 Features
+- Uses **Flan-T5-base** (`google/flan-t5-base`) as the main text generation model.  
+- Maintains **short-term memory** (last 3–5 turns) for context.  
+- Expands follow-up queries (*“And India?”*) into full questions (*“What is the capital of India?”*).  
+- **Fallback validator** ensures correct answers for common factual queries (e.g., capitals).  
+- Simple **CLI interface** with `/exit` command to quit.  
+- Modular structure with separate files:
+  - `model_loader.py` → Loads Hugging Face model  
+  - `chat_memory.py` → Sliding window memory  
+  - `interface.py` → CLI loop + integration + fallback logic  
+
+---
+
+## 🛠️ Setup
+
+1. **Clone or download** the repository.  
+
+2. Install dependencies:
+   ```bash
+   pip install transformers
+   ```
+
+3. Run the chatbot:
+   ```bash
+   python interface.py
+   ```
+
+---
+
+## 💻 Usage Example
+```
+
+Flan-T5 Chatbot started. Type /exit to quit.
+
+User: hii
+Bot: Is there anything I can help you with?
+User: who are you?
+Bot: I’m a Flan-T5 powered chatbot, here to help you..
+User: what is the capital of india?
+Bot: The capital of India is New Delhi.
+User: china?
+Bot: The capital of China is Beijing.
+User: japan?
+Bot: The capital of Japan is Tokyo.
+User: germany?
+Bot: The capital of Germany is Berlin.
+User: /exit
+Exiting chatbot. Goodbye!
+```
+
+---
+
+## 📌 Notes
+- This chatbot is not fully comprehensive — Flan-T5 is an instruction-based model and may sometimes generate incorrect or fabricated responses.
+- The fallback system guarantees factual answers for specific queries, such as capitals, jokes, and identity questions.
+- The main goal of this assignment is demonstrating integration, memory management, and a command-line interface.
+
+---
+
+✨ That’s it — your CLI chatbot with Flan-T5 is ready!  
