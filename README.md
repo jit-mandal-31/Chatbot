@@ -63,4 +63,4 @@ Exiting chatbot. Goodbye!
 
 ---
 
-✨ That’s it — your CLI chatbot with Flan-T5 is ready!  
+✨ Your Flan-T5 CLI chatbot is now ready to use!
