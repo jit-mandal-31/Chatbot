@@ -19,14 +19,12 @@ Provides a simple CLI interface with /exit command to quit.
 
 ## 🛠️ Setup
 
-1. **Clone or download** the repository.  
-
-2. Install dependencies:
+1. Install dependencies:
    ```bash
    pip install transformers
    ```
 
-3. Run the chatbot:
+2. Run the chatbot:
    ```bash
    python interface.py
    ```
