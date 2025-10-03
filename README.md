@@ -6,16 +6,15 @@ It uses **Hugging Face’s Flan-T5 model** for text generation, with a **sliding
 ---
 
 ## 📌 Features
-- Uses **Flan-T5-base** (`google/flan-t5-base`) as the main text generation model.  
-- Maintains **short-term memory** (last 3–5 turns) for context.  
-- Expands follow-up queries (*“And India?”*) into full questions (*“What is the capital of India?”*).  
-- **Fallback validator** ensures correct answers for common factual queries (e.g., capitals).  
-- Simple **CLI interface** with `/exit` command to quit.  
+- Uses Flan-T5-base (google/flan-t5-base) as the primary text generation model.
+- Maintains short-term memory (last 3–5 conversation turns) for context.
+- Automatically expands follow-up queries (e.g., “And India?” → “What is the capital of India?”).
+- Fallback validator ensures correct answers for common factual queries (e.g., capitals).
+Provides a simple CLI interface with /exit command to quit.
 - Modular structure with separate files:
-  - `model_loader.py` → Loads Hugging Face model  
-  - `chat_memory.py` → Sliding window memory  
-  - `interface.py` → CLI loop + integration + fallback logic  
-
+  - model_loader.py → Loads the Hugging Face model.
+  - chat_memory.py → Sliding-window memory management.
+  - interface.py → CLI loop, integration, and fallback logic.
 ---
 
 ## 🛠️ Setup
