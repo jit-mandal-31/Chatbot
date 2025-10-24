@@ -52,6 +52,12 @@ User: /exit
 Exiting chatbot. Goodbye!
 ```
 
+## Demo video
+
+
+https://github.com/user-attachments/assets/355dddef-6b7c-496d-8f0c-9d7173b8bac5
+
+
 ---
 
 ## 📌 Notes
